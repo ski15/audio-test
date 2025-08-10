@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Test Demo — MOS & ABX with Preloaded Audio</title>
+</head>
+<body>
+  <h3>Dummy MOS / ABX Test ((audio plays inline))</h3>
+  <p>Try a MOS rating of some sample sounds:</p>
+  <div>
+    <audio id="audio1" controls src="https://cdn.pixabay.com/download/audio/2021/09/03/audio_b1d99de6f3.mp3?filename=ding-sound-effect-18250.mp3"></audio><br/>
+    <button onclick="submit('ding')">Rate Ding</button>
+  </div>
+  <div>
+    <audio id="audio2" controls src="https://cdn.pixabay.com/download/audio/2022/02/09/audio_26d3996fa1.mp3?filename=birds-chirping-ambient-11293.mp3"></audio><br/>
+    <button onclick="submit('birds')">Rate Birds</button>
+  </div>
+  <div>
+    <audio id="audio3" controls src="https://cdn.pixabay.com/download/audio/2021/07/09/audio_603db6b054.mp3?filename=fast-small-sweep-transition-144399.mp3"></audio><br/>
+    <button onclick="submit('woosh')">Rate Woosh</button>
+  </div>
+  <hr/>
+  <div id="log"></div>
+  
+  <script>
+    const log = document.getElementById('log');
+    function submit(name) {
+      const rating = prompt(`Please rate "${name}" from 1 to 5:`);
+      if (rating) {
+        const ts = new Date().toISOString();
+        log.innerHTML += \`<p>\${name} rated: \${rating} @ \${ts}</p>\`;
+      }
+    }
+  </script>
+</body>
+</html>
