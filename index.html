@@ -21,32 +21,41 @@
 
 <div class="section" id="section-intro">
   <p>
-    Please use good headphones and perform the test in a quiet environment.
-    You will first rate samples (MOS), then complete ABX trials.
+    Koristite slušalice i riješite test u tihom okruženju.
+    Prvo će biti prikazan MOS, a zatim ABX test.
   </p>
   <p>
-    Your ID can be a pseudonym or an assigned code.
+    ID može biti bilo kojeg oblika.
   </p>
   <label>
     Listener ID:
     <input id="listenerId" autocomplete="off">
   </label>
   <br><br>
-  <button id="startBtn">Start Test</button>
+  <button id="startBtn">Start</button>
 </div>
 
 <div class="section hidden" id="section-mos">
-  <h2>MOS Section</h2>
+  <h2>MOS dio testa</h2>
   <p class="status" id="mosStatus"></p>
   <audio id="mosAudio" controls></audio>
-  <p>Rate the overall quality from 1 (very bad) to 5 (excellent):</p>
+  <p>Ocijenite kvalitetu audio isječka na skali od 1 (uopće ne zvuči stvarno) do 5 (zvuči potpuno stvarno):</p>
+  <p>Skala:
+    <ul>
+      <li> 1: uopće ne zvuči stvarno </li>
+      <li> 2: uglavnom ne zvuči stvarno</li>
+      <li> 3: ne mogu procijeniti / između</li>
+      <li> 4: uglavnom zvuči stvarno</li>
+      <li> 5: zvuči potpuno stvarno</li>
+    </ul>
+  </p>
   <div id="mosRatingButtons"></div>
   <br>
-  <button id="mosNextBtn" disabled>Next sample</button>
+  <button id="mosNextBtn" disabled>Sljedeće</button>
 </div>
 
 <div class="section hidden" id="section-abx">
-  <h2>ABX Section</h2>
+  <h2>ABX dio testa</h2>
   <p class="status" id="abxStatus"></p>
   <div>
     <p><strong>A</strong>:</p>
@@ -60,14 +69,14 @@
     <p><strong>X</strong>:</p>
     <audio id="abxAudioX" controls></audio>
   </div>
-  <p>Is X the same as A or B?</p>
-  <button id="btnChooseA">X is A</button>
-  <button id="btnChooseB">X is B</button>
+  <p>Je li X isti kao A ili B?</p>
+  <button id="btnChooseA">X = A</button>
+  <button id="btnChooseB">X = B</button>
 </div>
 
 <div class="section hidden" id="section-submit">
-  <h2>Submit Responses</h2>
-  <p>Click submit to send your ratings and ABX answers.</p>
+  <h2>Submit</h2>
+  <p>Kliknite submit za spremanje testa.</p>
   <button id="submitBtn">Submit</button>
   <p id="submitStatus"></p>
 </div>
