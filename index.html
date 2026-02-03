@@ -1,40 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>Test Demo — MOS & ABX with Preloaded Audio</title>
+  <meta charset="utf-8">
+  <title>MOS + ABX Listening Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           max-width: 960px; margin: 0 auto; padding: 1rem; line-height: 1.4; }
+    h1, h2 { margin-top: 1.2rem; }
+    .section { border: 1px solid #ccc; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+    .hidden { display: none; }
+    button { margin: 0.25rem; padding: 0.4rem 0.8rem; }
+    .status { font-weight: 600; margin-bottom: 0.5rem; }
+    .warning { color: #b00; }
+    .success { color: #060; }
+  </style>
 </head>
 <body>
-  <h3>Dummy MOS / ABX Test ((audio plays inline))</h3>
-  <p>Try a MOS rating of some sample sounds:</p>
+<h1>MOS + ABX Listening Test</h1>
+
+<div class="section" id="section-intro">
+  <p>
+    Please use good headphones and perform the test in a quiet environment.
+    You will first rate samples (MOS), then do ABX trials.
+  </p>
+  <p>
+    Your ID can be a pseudonym or code assigned for this experiment.
+  </p>
+  <label>
+    Listener ID:
+    <input id="listenerId" autocomplete="off">
+  </label>
+  <br><br>
+  <button id="startBtn">Start Test</button>
+</div>
+
+<div class="section hidden" id="section-mos">
+  <h2>MOS Section</h2>
+  <p class="status" id="mosStatus"></p>
+  <audio id="mosAudio" controls></audio>
+  <p>Rate the overall quality from 1 (very bad) to 5 (excellent):</p>
+  <div id="mosRatingButtons"></div>
+  <br>
+  <button id="mosNextBtn" disabled>Next sample</button>
+</div>
+
+<div class="section hidden" id="section-abx">
+  <h2>ABX Section</h2>
+  <p class="status" id="abxStatus"></p>
   <div>
-    <audio id="audio1" controls src="https://ski15.github.io/audio-test/_1Lc1LIPnzo_280.0-290.0.wav"></audio><br/>
-    <button onclick="submit('ding')">Rate Ding</button>
+    <p><strong>A</strong>:</p>
+    <audio id="abxAudioA" controls></audio>
   </div>
   <div>
-    <audio id="audio2" controls src="https://drive.google.com/file/d/1PJlBhSwiEo5rW8eULpfD4Bfcd5H9BUkZ/view?usp=sharing"></audio><br/>
-    <button onclick="submit('birds')">Rate Birds</button>
+    <p><strong>B</strong>:</p>
+    <audio id="abxAudioB" controls></audio>
   </div>
   <div>
-    <audio id="audio3" controls src="https://cdn.pixabay.com/download/audio/2021/07/09/audio_603db6b054.mp3?filename=fast-small-sweep-transition-144399.mp3"></audio><br/>
-    <button onclick="submit('woosh')">Rate Woosh</button>
+    <p><strong>X</strong>:</p>
+    <audio id="abxAudioX" controls></audio>
   </div>
-  <hr/>
-  <div id="log"></div>
-  
-  <script>
-    const log = document.getElementById('log');
-    function submit(name) {
-      const rating = prompt(`Please rate "${name}" from 1 to 5:`);
-      if (rating) {
-        const ts = new Date().toISOString();
-        log.innerHTML += \`<p>\${name} rated: \${rating} @ \${ts}</p>\`;
-      }
-    }
-  </script>
+  <p>Is X the same as A or B?</p>
+  <button id="btnChooseA">X is A</button>
+  <button id="btnChooseB">X is B</button>
+</div>
+
+<div class="section hidden" id="section-submit">
+  <h2>Submit Responses</h2>
+  <p>Click submit to send your ratings and ABX answers to the experimenter.</p>
+  <button id="submitBtn">Submit</button>
+  <p id="submitStatus"></p>
+</div>
+
+<script>
+// ================== CONFIG ==================
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwgRJJaHI3APNMLhqWoACieqq19IpF9784UTk6kY8jwoWLfYotMi7VX0DkFQvNKUtd3wA/exec';
+
+// --- Example MOS config ---
+// Replace these with your real files for:
+// generated_for_subjective/mos/{wavegan,specgan,melgan}/{applause,hubbub,motor,rail}/...
+// and real_for_subjective/mos/{applause,hubbub,motor,rail}/...
+const MOS_TESTS = [
+  // WaveGAN, applause
+  {
+    id: "wavegan_applause_01",
+    type: "mos",
+    model: "wavegan",
+    class_label: "applause",
+    file: "generated_for_subjective/mos/wavegan/applause/sample_01.wav"
+  },
+  // Real applause
+  {
+    id: "real_applause_01",
+    type: "mos",
+    model: "real",
+    class_label: "applause",
+    file: "real_for_subjective/mos/applause/sample_01.wav"
+  }
+  // TODO: extend with all your other MOS files
+];
+
+// --- Example ABX config ---
+// Replace with your real paths. For each trial, define A, B, X and which is correct.
+const ABX_TESTS = [
+  {
+    id: "wavegan_applause_abx_01",
+    type: "abx",
+    model: "wavegan",
+    class_label: "applause",
+    A: "real_for_subjective/abx/wavegan/applause/A_01.wav",
+    B: "generated_for_subjective/abx/wavegan/applause/B_01.wav",
+    X: "generated_for_subjective/abx/wavegan/applause/X_01.wav",
+    correct: "B"
+  }
+  // TODO: extend with all your other ABX trials
+];
+
+// ================== STATE ==================
+let listenerId = "";
+let mosIndex = 0;
+let abxIndex = 0;
+let mosResults = [];
+let abxResults = [];
+let currentMosRating = null;
+
+// ================== ELEMENTS ==================
+const sectionIntro = document.getElementById('section-intro');
+const sectionMos = document.getElementById('section-mos');
+const sectionAbx = document.getElementById('section-abx');
+const sectionSubmit = document.getElementById('section-submit');
+
+const mosStatus = document.getElementById('mosStatus');
+const mosAudio = document.getElementById('mosAudio');
+const mosRatingButtons = document.getElementById('mosRatingButtons');
+const mosNextBtn = document.getElementById('mosNextBtn');
+
+const abxStatus = document.getElementById('abxStatus');
+const abxAudioA = document.getElementById('abxAudioA');
+const abxAudioB = document.getElementById('abxAudioB');
+const abxAudioX = document.getElementById('abxAudioX');
+
+const submitStatus = document.getElementById('submitStatus');
+
+// ================== MOS LOGIC ==================
+function initMosRatings() {
+  for (let i = 1; i <= 5; i++) {
+    const btn = document.createElement('button');
+    btn.textContent = i;
+    btn.addEventListener('click', () => {
+      currentMosRating = i;
+      mosNextBtn.disabled = false;
+    });
+    mosRatingButtons.appendChild(btn);
+  }
+}
+
+function showMosSample() {
+  const s = MOS_TESTS[mosIndex];
+  mosStatus.textContent = `Sample ${mosIndex + 1} / ${MOS_TESTS.length}`;
+  mosAudio.src = s.file;
+  currentMosRating = null;
+  mosNextBtn.disabled = true;
+}
+
+mosNextBtn.addEventListener('click', () => {
+  const s = MOS_TESTS[mosIndex];
+  mosResults.push({
+    listenerId,
+    sampleId: s.id,
+    type: s.type,
+    model: s.model,
+    class_label: s.class_label,
+    file: s.file,
+    rating: currentMosRating,
+    timestamp: new Date().toISOString()
+  });
+  mosIndex++;
+  if (mosIndex < MOS_TESTS.length) {
+    showMosSample();
+  } else {
+    sectionMos.classList.add('hidden');
+    sectionAbx.classList.remove('hidden');
+    showAbxTrial();
+  }
+});
+
+// ================== ABX LOGIC ==================
+function showAbxTrial() {
+  const t = ABX_TESTS[abxIndex];
+  abxStatus.textContent = `Trial ${abxIndex + 1} / ${ABX_TESTS.length}`;
+  abxAudioA.src = t.A;
+  abxAudioB.src = t.B;
+  abxAudioX.src = t.X;
+}
+
+function recordAbxChoice(choice) {
+  const t = ABX_TESTS[abxIndex];
+  abxResults.push({
+    listenerId,
+    trialId: t.id,
+    type: t.type,
+    model: t.model,
+    class_label: t.class_label,
+    A: t.A,
+    B: t.B,
+    X: t.X,
+    chosen: choice,
+    correct: t.correct,
+    timestamp: new Date().toISOString()
+  });
+  abxIndex++;
+  if (abxIndex < ABX_TESTS.length) {
+    showAbxTrial();
+  } else {
+    sectionAbx.classList.add('hidden');
+    sectionSubmit.classList.remove('hidden');
+  }
+}
+
+document.getElementById('btnChooseA').addEventListener('click', () => recordAbxChoice('A'));
+document.getElementById('btnChooseB').addEventListener('click', () => recordAbxChoice('B'));
+
+// ================== START / SUBMIT ==================
+document.getElementById('startBtn').addEventListener('click', () => {
+  const idInput = document.getElementById('listenerId').value.trim();
+  if (!idInput) {
+    alert('Please enter a listener ID (can be a pseudonym).');
+    return;
+  }
+  listenerId = idInput;
+
+  // Optional randomization
+  MOS_TESTS.sort(() => Math.random() - 0.5);
+  ABX_TESTS.sort(() => Math.random() - 0.5);
+
+  sectionIntro.classList.add('hidden');
+  sectionMos.classList.remove('hidden');
+  showMosSample();
+});
+
+document.getElementById('submitBtn').addEventListener('click', async () => {
+  const payload = {
+    listenerId,
+    mosResults,
+    abxResults
+  };
+
+  submitStatus.textContent = 'Submitting responses...';
+  submitStatus.className = 'status';
+
+  try {
+    const response = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors', // simplifies CORS; we can’t read the response
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    submitStatus.textContent = 'Thank you! Your responses have been submitted.';
+    submitStatus.className = 'status success';
+  } catch (err) {
+    console.error(err);
+    submitStatus.textContent = 'Error submitting data. Please contact the experimenter.';
+    submitStatus.className = 'status warning';
+  }
+});
+
+// Initialize MOS rating buttons on load
+initMosRatings();
+</script>
 </body>
 </html>
-
-
-
-
