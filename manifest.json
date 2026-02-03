@@ -1,0 +1,991 @@
+{
+  "mos": [
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "applause",
+      "mos_id": "wavegan_applause_g0",
+      "path": "generated_for_subjective/mos/wavegan/applause/sample_028.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "applause",
+      "mos_id": "wavegan_applause_g1",
+      "path": "generated_for_subjective/mos/wavegan/applause/sample_006.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "applause",
+      "mos_id": "wavegan_applause_g2",
+      "path": "generated_for_subjective/mos/wavegan/applause/sample_070.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "applause",
+      "mos_id": "wavegan_applause_g3",
+      "path": "generated_for_subjective/mos/wavegan/applause/sample_062.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "applause",
+      "mos_id": "wavegan_applause_g4",
+      "path": "generated_for_subjective/mos/wavegan/applause/sample_057.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "hubbub",
+      "mos_id": "wavegan_hubbub_g0",
+      "path": "generated_for_subjective/mos/wavegan/hubbub/sample_035.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "hubbub",
+      "mos_id": "wavegan_hubbub_g1",
+      "path": "generated_for_subjective/mos/wavegan/hubbub/sample_026.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "hubbub",
+      "mos_id": "wavegan_hubbub_g2",
+      "path": "generated_for_subjective/mos/wavegan/hubbub/sample_139.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "hubbub",
+      "mos_id": "wavegan_hubbub_g3",
+      "path": "generated_for_subjective/mos/wavegan/hubbub/sample_022.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "hubbub",
+      "mos_id": "wavegan_hubbub_g4",
+      "path": "generated_for_subjective/mos/wavegan/hubbub/sample_108.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "motor",
+      "mos_id": "wavegan_motor_g0",
+      "path": "generated_for_subjective/mos/wavegan/motor/sample_008.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "motor",
+      "mos_id": "wavegan_motor_g1",
+      "path": "generated_for_subjective/mos/wavegan/motor/sample_007.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "motor",
+      "mos_id": "wavegan_motor_g2",
+      "path": "generated_for_subjective/mos/wavegan/motor/sample_023.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "motor",
+      "mos_id": "wavegan_motor_g3",
+      "path": "generated_for_subjective/mos/wavegan/motor/sample_055.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "motor",
+      "mos_id": "wavegan_motor_g4",
+      "path": "generated_for_subjective/mos/wavegan/motor/sample_059.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "rail",
+      "mos_id": "wavegan_rail_g0",
+      "path": "generated_for_subjective/mos/wavegan/rail/sample_129.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "rail",
+      "mos_id": "wavegan_rail_g1",
+      "path": "generated_for_subjective/mos/wavegan/rail/sample_006.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "rail",
+      "mos_id": "wavegan_rail_g2",
+      "path": "generated_for_subjective/mos/wavegan/rail/sample_143.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "rail",
+      "mos_id": "wavegan_rail_g3",
+      "path": "generated_for_subjective/mos/wavegan/rail/sample_050.wav"
+    },
+    {
+      "type": "generated",
+      "model": "wavegan",
+      "class": "rail",
+      "mos_id": "wavegan_rail_g4",
+      "path": "generated_for_subjective/mos/wavegan/rail/sample_139.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "applause",
+      "mos_id": "specgan_applause_g0",
+      "path": "generated_for_subjective/mos/specgan/applause/00002510_chunk0099.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "applause",
+      "mos_id": "specgan_applause_g1",
+      "path": "generated_for_subjective/mos/specgan/applause/00002506_chunk0112.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "applause",
+      "mos_id": "specgan_applause_g2",
+      "path": "generated_for_subjective/mos/specgan/applause/00002510_chunk0114.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "applause",
+      "mos_id": "specgan_applause_g3",
+      "path": "generated_for_subjective/mos/specgan/applause/00002514_chunk0071.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "applause",
+      "mos_id": "specgan_applause_g4",
+      "path": "generated_for_subjective/mos/specgan/applause/00002510_chunk0027.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "hubbub",
+      "mos_id": "specgan_hubbub_g0",
+      "path": "generated_for_subjective/mos/specgan/hubbub/00001742_chunk0027.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "hubbub",
+      "mos_id": "specgan_hubbub_g1",
+      "path": "generated_for_subjective/mos/specgan/hubbub/00001742_chunk0035.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "hubbub",
+      "mos_id": "specgan_hubbub_g2",
+      "path": "generated_for_subjective/mos/specgan/hubbub/00001662_chunk0000.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "hubbub",
+      "mos_id": "specgan_hubbub_g3",
+      "path": "generated_for_subjective/mos/specgan/hubbub/00001742_chunk0021.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "hubbub",
+      "mos_id": "specgan_hubbub_g4",
+      "path": "generated_for_subjective/mos/specgan/hubbub/00001662_chunk0020.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "motor",
+      "mos_id": "specgan_motor_g0",
+      "path": "generated_for_subjective/mos/specgan/motor/00001200_chunk0016.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "motor",
+      "mos_id": "specgan_motor_g1",
+      "path": "generated_for_subjective/mos/specgan/motor/00001200_chunk0005.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "motor",
+      "mos_id": "specgan_motor_g2",
+      "path": "generated_for_subjective/mos/specgan/motor/00001198_chunk0035.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "motor",
+      "mos_id": "specgan_motor_g3",
+      "path": "generated_for_subjective/mos/specgan/motor/00001198_chunk0019.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "motor",
+      "mos_id": "specgan_motor_g4",
+      "path": "generated_for_subjective/mos/specgan/motor/00001198_chunk0027.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "rail",
+      "mos_id": "specgan_rail_g0",
+      "path": "generated_for_subjective/mos/specgan/rail/00000828_chunk0005.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "rail",
+      "mos_id": "specgan_rail_g1",
+      "path": "generated_for_subjective/mos/specgan/rail/00000828 copy_chunk0013.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "rail",
+      "mos_id": "specgan_rail_g2",
+      "path": "generated_for_subjective/mos/specgan/rail/00000828 copy_chunk0011.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "rail",
+      "mos_id": "specgan_rail_g3",
+      "path": "generated_for_subjective/mos/specgan/rail/00000828_chunk0010.wav"
+    },
+    {
+      "type": "generated",
+      "model": "specgan",
+      "class": "rail",
+      "mos_id": "specgan_rail_g4",
+      "path": "generated_for_subjective/mos/specgan/rail/00000828 copy_chunk0012.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "applause",
+      "mos_id": "melgan_applause_g0",
+      "path": "generated_for_subjective/mos/melgan/applause/hsmouFWvfeY_310.0-320.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "applause",
+      "mos_id": "melgan_applause_g1",
+      "path": "generated_for_subjective/mos/melgan/applause/gXs-N43PhpU_5.0-15.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "applause",
+      "mos_id": "melgan_applause_g2",
+      "path": "generated_for_subjective/mos/melgan/applause/TypWtZYLCF8_190.0-200.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "applause",
+      "mos_id": "melgan_applause_g3",
+      "path": "generated_for_subjective/mos/melgan/applause/CC9_Bv6-aXw_420.0-430.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "applause",
+      "mos_id": "melgan_applause_g4",
+      "path": "generated_for_subjective/mos/melgan/applause/2QhE0GMctFE_570.0-580.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "hubbub",
+      "mos_id": "melgan_hubbub_g0",
+      "path": "generated_for_subjective/mos/melgan/hubbub/XKl0gcdFxtQ_180.0-190.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "hubbub",
+      "mos_id": "melgan_hubbub_g1",
+      "path": "generated_for_subjective/mos/melgan/hubbub/j7_xNRWcW4M_240.0-250.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "hubbub",
+      "mos_id": "melgan_hubbub_g2",
+      "path": "generated_for_subjective/mos/melgan/hubbub/MR9NACv_28c_30.0-40.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "hubbub",
+      "mos_id": "melgan_hubbub_g3",
+      "path": "generated_for_subjective/mos/melgan/hubbub/3bodHK0jaic_150.0-160.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "hubbub",
+      "mos_id": "melgan_hubbub_g4",
+      "path": "generated_for_subjective/mos/melgan/hubbub/DOOVEkKdI04_60.0-70.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "motor",
+      "mos_id": "melgan_motor_g0",
+      "path": "generated_for_subjective/mos/melgan/motor/14rXvC_iPps_170.0-180.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "motor",
+      "mos_id": "melgan_motor_g1",
+      "path": "generated_for_subjective/mos/melgan/motor/PKncd8ajim0_110.0-120.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "motor",
+      "mos_id": "melgan_motor_g2",
+      "path": "generated_for_subjective/mos/melgan/motor/AxdXYL-zOPA_0.0-10.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "motor",
+      "mos_id": "melgan_motor_g3",
+      "path": "generated_for_subjective/mos/melgan/motor/TXSA4JG4e6k_120.0-130.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "motor",
+      "mos_id": "melgan_motor_g4",
+      "path": "generated_for_subjective/mos/melgan/motor/TeXb9NwIv5s_30.0-40.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "rail",
+      "mos_id": "melgan_rail_g0",
+      "path": "generated_for_subjective/mos/melgan/rail/HtOIeRt7-m4_280.0-290.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "rail",
+      "mos_id": "melgan_rail_g1",
+      "path": "generated_for_subjective/mos/melgan/rail/R6nIHiOqdio_180.0-190.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "rail",
+      "mos_id": "melgan_rail_g2",
+      "path": "generated_for_subjective/mos/melgan/rail/Bd6jCzYYbWI_20.0-30.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "rail",
+      "mos_id": "melgan_rail_g3",
+      "path": "generated_for_subjective/mos/melgan/rail/4hNSo1xyXGU_140.0-150.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "generated",
+      "model": "melgan",
+      "class": "rail",
+      "mos_id": "melgan_rail_g4",
+      "path": "generated_for_subjective/mos/melgan/rail/2zlHq_EO2iw_230.0-240.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "applause",
+      "mos_id": "real_applause_r0",
+      "path": "real_for_subjective/mos/applause/pSMEVPApxRM_0.0-10.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "applause",
+      "mos_id": "real_applause_r1",
+      "path": "real_for_subjective/mos/applause/aRNtcUFrKQM_120.0-130.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "applause",
+      "mos_id": "real_applause_r2",
+      "path": "real_for_subjective/mos/applause/UWZWQGGd3Yc_240.0-250.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "applause",
+      "mos_id": "real_applause_r3",
+      "path": "real_for_subjective/mos/applause/CiMfyC3I1P4_30.0-40.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "applause",
+      "mos_id": "real_applause_r4",
+      "path": "real_for_subjective/mos/applause/5qplbiS5jl0_200.0-210.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "hubbub",
+      "mos_id": "real_hubbub_r0",
+      "path": "real_for_subjective/mos/hubbub/wqeOwTi8dTY_40.0-50.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "hubbub",
+      "mos_id": "real_hubbub_r1",
+      "path": "real_for_subjective/mos/hubbub/69owEWC73JI_120.0-130.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "hubbub",
+      "mos_id": "real_hubbub_r2",
+      "path": "real_for_subjective/mos/hubbub/WSQPQE7A0DY_180.0-190.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "hubbub",
+      "mos_id": "real_hubbub_r3",
+      "path": "real_for_subjective/mos/hubbub/1RL5j9IL09k_30.0-40.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "hubbub",
+      "mos_id": "real_hubbub_r4",
+      "path": "real_for_subjective/mos/hubbub/a1IjTHyDk9s_0.0-10.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "motor",
+      "mos_id": "real_motor_r0",
+      "path": "real_for_subjective/mos/motor/8sdIRlfk61I_30.0-40.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "motor",
+      "mos_id": "real_motor_r1",
+      "path": "real_for_subjective/mos/motor/fZzLIfGogs0_130.0-140.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "motor",
+      "mos_id": "real_motor_r2",
+      "path": "real_for_subjective/mos/motor/o0LupYYPblQ_10.0-20.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "motor",
+      "mos_id": "real_motor_r3",
+      "path": "real_for_subjective/mos/motor/WT51zv5srW4_24.0-34.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "motor",
+      "mos_id": "real_motor_r4",
+      "path": "real_for_subjective/mos/motor/CFACFEds64Q_240.0-250.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "rail",
+      "mos_id": "real_rail_r0",
+      "path": "real_for_subjective/mos/rail/93StBYkKorQ_290.0-300.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "rail",
+      "mos_id": "real_rail_r1",
+      "path": "real_for_subjective/mos/rail/euX65WsaxNk_160.0-170.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "rail",
+      "mos_id": "real_rail_r2",
+      "path": "real_for_subjective/mos/rail/e7L0oZqPWuw_380.0-390.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "rail",
+      "mos_id": "real_rail_r3",
+      "path": "real_for_subjective/mos/rail/AhaEn89OH30_0.0-10.0.wav"
+    },
+    {
+      "type": "real",
+      "model": "real",
+      "class": "rail",
+      "mos_id": "real_rail_r4",
+      "path": "real_for_subjective/mos/rail/PDnTjYi38b8_10.0-20.0.wav"
+    }
+  ],
+  "abx": [
+    {
+      "abx_id": "wavegan_applause_pair0",
+      "class": "applause",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/applause/8XFBB2m7WWI_170.0-180.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/applause/sample_068.wav"
+    },
+    {
+      "abx_id": "wavegan_applause_pair1",
+      "class": "applause",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/applause/h6QNTCnH4oI_60.0-70.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/applause/sample_018.wav"
+    },
+    {
+      "abx_id": "wavegan_applause_pair2",
+      "class": "applause",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/applause/fanoFQjhtns_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/applause/sample_043.wav"
+    },
+    {
+      "abx_id": "wavegan_applause_pair3",
+      "class": "applause",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/applause/bQd0_j1Kizo_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/applause/sample_136.wav"
+    },
+    {
+      "abx_id": "wavegan_applause_pair4",
+      "class": "applause",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/applause/o0fqmDyja0U_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/applause/sample_062.wav"
+    },
+    {
+      "abx_id": "wavegan_hubbub_pair0",
+      "class": "hubbub",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/hubbub/WbfpstFvb5E_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/hubbub/sample_142.wav"
+    },
+    {
+      "abx_id": "wavegan_hubbub_pair1",
+      "class": "hubbub",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/hubbub/0FELcZssp1I_480.0-490.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/hubbub/sample_056.wav"
+    },
+    {
+      "abx_id": "wavegan_hubbub_pair2",
+      "class": "hubbub",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/hubbub/VdRiuZzrtQs_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/hubbub/sample_083.wav"
+    },
+    {
+      "abx_id": "wavegan_hubbub_pair3",
+      "class": "hubbub",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/hubbub/8Xrg-hGN4yE_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/hubbub/sample_014.wav"
+    },
+    {
+      "abx_id": "wavegan_hubbub_pair4",
+      "class": "hubbub",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/hubbub/aqxO-k3ZrtM_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/hubbub/sample_058.wav"
+    },
+    {
+      "abx_id": "wavegan_motor_pair0",
+      "class": "motor",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/motor/3q9fjDDtHaQ_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/motor/sample_068.wav"
+    },
+    {
+      "abx_id": "wavegan_motor_pair1",
+      "class": "motor",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/motor/Ova2o3k_QzM_80.0-90.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/motor/sample_016.wav"
+    },
+    {
+      "abx_id": "wavegan_motor_pair2",
+      "class": "motor",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/motor/iC6chIPk2Pg_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/motor/sample_054.wav"
+    },
+    {
+      "abx_id": "wavegan_motor_pair3",
+      "class": "motor",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/motor/dlQqOuHISkI_160.0-170.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/motor/sample_145.wav"
+    },
+    {
+      "abx_id": "wavegan_motor_pair4",
+      "class": "motor",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/motor/Z4VN77hBY78_80.0-90.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/motor/sample_080.wav"
+    },
+    {
+      "abx_id": "wavegan_rail_pair0",
+      "class": "rail",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/rail/TxUFDqTL7AM_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/rail/sample_117.wav"
+    },
+    {
+      "abx_id": "wavegan_rail_pair1",
+      "class": "rail",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/rail/L3sFvn8S26s_100.0-110.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/rail/sample_036.wav"
+    },
+    {
+      "abx_id": "wavegan_rail_pair2",
+      "class": "rail",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/rail/kBZzofmxqbU_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/rail/sample_067.wav"
+    },
+    {
+      "abx_id": "wavegan_rail_pair3",
+      "class": "rail",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/rail/bJybDY4EDnE_210.0-220.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/rail/sample_035.wav"
+    },
+    {
+      "abx_id": "wavegan_rail_pair4",
+      "class": "rail",
+      "model": "wavegan",
+      "real_path": "real_for_subjective/abx/wavegan/rail/TyJPNpWqXiU_80.0-90.0.wav",
+      "gen_path": "generated_for_subjective/abx/wavegan/rail/sample_063.wav"
+    },
+    {
+      "abx_id": "specgan_applause_pair0",
+      "class": "applause",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/applause/aJULQA27Vkw_160.0-170.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/applause/00002514_chunk0069.wav"
+    },
+    {
+      "abx_id": "specgan_applause_pair1",
+      "class": "applause",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/applause/8-IaYZOmskM_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/applause/00002510_chunk0104.wav"
+    },
+    {
+      "abx_id": "specgan_applause_pair2",
+      "class": "applause",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/applause/IJVBKoau6g4_190.0-200.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/applause/00002514_chunk0068.wav"
+    },
+    {
+      "abx_id": "specgan_applause_pair3",
+      "class": "applause",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/applause/ibK-boM0tyE_90.0-100.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/applause/00002510_chunk0089.wav"
+    },
+    {
+      "abx_id": "specgan_applause_pair4",
+      "class": "applause",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/applause/67zyxZb-wQM_340.0-350.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/applause/00002510_chunk0070.wav"
+    },
+    {
+      "abx_id": "specgan_hubbub_pair0",
+      "class": "hubbub",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/hubbub/mGnbk-wJHRk_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/hubbub/00001742_chunk0020.wav"
+    },
+    {
+      "abx_id": "specgan_hubbub_pair1",
+      "class": "hubbub",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/hubbub/48Y22fZ5w1c_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/hubbub/00001662_chunk0006.wav"
+    },
+    {
+      "abx_id": "specgan_hubbub_pair2",
+      "class": "hubbub",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/hubbub/Uxr63wY7Swg_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/hubbub/00001742_chunk0034.wav"
+    },
+    {
+      "abx_id": "specgan_hubbub_pair3",
+      "class": "hubbub",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/hubbub/oMjCgLPMlYA_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/hubbub/00001662_chunk0014.wav"
+    },
+    {
+      "abx_id": "specgan_hubbub_pair4",
+      "class": "hubbub",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/hubbub/bXMsqpYfCQY_0.0-10.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/hubbub/00001662_chunk0019.wav"
+    },
+    {
+      "abx_id": "specgan_motor_pair0",
+      "class": "motor",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/motor/69tyMJlJYxg_340.0-350.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/motor/00001198_chunk0008.wav"
+    },
+    {
+      "abx_id": "specgan_motor_pair1",
+      "class": "motor",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/motor/ko91_sThwdo_290.0-300.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/motor/00001200_chunk0011.wav"
+    },
+    {
+      "abx_id": "specgan_motor_pair2",
+      "class": "motor",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/motor/xVwGStNaRC0_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/motor/00001200_chunk0010.wav"
+    },
+    {
+      "abx_id": "specgan_motor_pair3",
+      "class": "motor",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/motor/-AD-QFdGGzk_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/motor/00001200_chunk0021.wav"
+    },
+    {
+      "abx_id": "specgan_motor_pair4",
+      "class": "motor",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/motor/Q0SSVSN3zfQ_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/motor/00001200_chunk0029.wav"
+    },
+    {
+      "abx_id": "specgan_rail_pair0",
+      "class": "rail",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/rail/h6djwIHDWl0_0.0-10.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/rail/00000828 copy_chunk0014.wav"
+    },
+    {
+      "abx_id": "specgan_rail_pair1",
+      "class": "rail",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/rail/8YLweBSjNXI_360.0-370.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/rail/00000828_chunk0030.wav"
+    },
+    {
+      "abx_id": "specgan_rail_pair2",
+      "class": "rail",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/rail/hlR2UmVCfHc_170.0-180.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/rail/00000828 copy_chunk0034.wav"
+    },
+    {
+      "abx_id": "specgan_rail_pair3",
+      "class": "rail",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/rail/-h2CCdCkS1I_470.0-480.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/rail/00000828_chunk0005.wav"
+    },
+    {
+      "abx_id": "specgan_rail_pair4",
+      "class": "rail",
+      "model": "specgan",
+      "real_path": "real_for_subjective/abx/specgan/rail/Sx94cTN8CyY_200.0-210.0.wav",
+      "gen_path": "generated_for_subjective/abx/specgan/rail/00000828 copy_chunk0037.wav"
+    },
+    {
+      "abx_id": "melgan_applause_pair0",
+      "class": "applause",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/applause/Z-c6a6t3X8k_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/applause/CC9_Bv6-aXw_420.0-430.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "abx_id": "melgan_applause_pair1",
+      "class": "applause",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/applause/NU75ToG2r0Q_530.0-540.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/applause/PL_o2e8LEJo_10.0-20.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "abx_id": "melgan_applause_pair2",
+      "class": "applause",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/applause/CkA8NltvQJk_520.0-530.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/applause/_RYrdAkHbr8_260.0-270.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "abx_id": "melgan_applause_pair3",
+      "class": "applause",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/applause/xAWkmyqUe94_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/applause/PNwq1fKCoPg_250.0-260.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "abx_id": "melgan_applause_pair4",
+      "class": "applause",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/applause/o0fqmDyja0U_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/applause/5tz6t5-8jjk_30.0-40.0_reconstructed_epoch0075.wav"
+    },
+    {
+      "abx_id": "melgan_hubbub_pair0",
+      "class": "hubbub",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/hubbub/TK_fW8ul06c_0.0-10.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/hubbub/m4TzgZCnrFE_100.0-110.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "abx_id": "melgan_hubbub_pair1",
+      "class": "hubbub",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/hubbub/48Y22fZ5w1c_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/hubbub/PkprU86VSeo_240.0-250.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "abx_id": "melgan_hubbub_pair2",
+      "class": "hubbub",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/hubbub/iYLQE-HYrNo_0.0-10.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/hubbub/6pEslfJwMtY_280.0-290.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "abx_id": "melgan_hubbub_pair3",
+      "class": "hubbub",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/hubbub/ul2P7NMKn0I_0.0-9.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/hubbub/4TtmwD6Hqvs_18.0-28.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "abx_id": "melgan_hubbub_pair4",
+      "class": "hubbub",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/hubbub/YwhAcNsJYGc_470.0-480.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/hubbub/BWmAWCPbSzg_0.0-10.0_reconstructed_epoch0200.wav"
+    },
+    {
+      "abx_id": "melgan_motor_pair0",
+      "class": "motor",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/motor/-DWtHxB0qdc_30.0-40.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/motor/OlLCJgNGs-M_70.0-80.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_motor_pair1",
+      "class": "motor",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/motor/1c-ZSa31Iyw_0.0-9.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/motor/--rBe2ZPpzY_30.0-40.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_motor_pair2",
+      "class": "motor",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/motor/cdnAImUuoNI_0.0-10.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/motor/sCCxholKU3o_10.0-20.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_motor_pair3",
+      "class": "motor",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/motor/ysZfpsL3SW0_220.0-230.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/motor/cyXrYUgJpv0_0.0-10.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_motor_pair4",
+      "class": "motor",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/motor/wsmdBwSalpo_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/motor/M678U4LeNHk_0.0-7.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_rail_pair0",
+      "class": "rail",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/rail/3MoaYzRsPDU_230.0-240.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/rail/FHtgdId0uug_20.0-30.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_rail_pair1",
+      "class": "rail",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/rail/4-7VW-mBMEY_0.0-10.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/rail/CQxjmOAk0jU_110.0-120.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_rail_pair2",
+      "class": "rail",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/rail/Td9yQieAE3c_90.0-100.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/rail/3tuw85sgcWM_220.0-230.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_rail_pair3",
+      "class": "rail",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/rail/InuorFIkBXY_10.0-20.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/rail/cRAZeR9Vc00_250.0-260.0_reconstructed_epoch0025.wav"
+    },
+    {
+      "abx_id": "melgan_rail_pair4",
+      "class": "rail",
+      "model": "melgan",
+      "real_path": "real_for_subjective/abx/melgan/rail/YDXDfwHWe_g_140.0-150.0.wav",
+      "gen_path": "generated_for_subjective/abx/melgan/rail/QLDgJflX1rk_200.0-210.0_reconstructed_epoch0025.wav"
+    }
+  ],
+  "meta": {
+    "description": "Subjective test specification (MOS clips and ABX base pairs)",
+    "root_generated": "generated_for_subjective",
+    "root_real": "real_for_subjective"
+  }
+}

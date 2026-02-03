@@ -22,10 +22,10 @@
 <div class="section" id="section-intro">
   <p>
     Please use good headphones and perform the test in a quiet environment.
-    You will first rate samples (MOS), then do ABX trials.
+    You will first rate samples (MOS), then complete ABX trials.
   </p>
   <p>
-    Your ID can be a pseudonym or code assigned for this experiment.
+    Your ID can be a pseudonym or an assigned code.
   </p>
   <label>
     Listener ID:
@@ -67,7 +67,7 @@
 
 <div class="section hidden" id="section-submit">
   <h2>Submit Responses</h2>
-  <p>Click submit to send your ratings and ABX answers to the experimenter.</p>
+  <p>Click submit to send your ratings and ABX answers.</p>
   <button id="submitBtn">Submit</button>
   <p id="submitStatus"></p>
 </div>
@@ -76,48 +76,10 @@
 // ================== CONFIG ==================
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwgRJJaHI3APNMLhqWoACieqq19IpF9784UTk6kY8jwoWLfYotMi7VX0DkFQvNKUtd3wA/exec';
 
-// --- Example MOS config ---
-// Replace these with your real files for:
-// generated_for_subjective/mos/{wavegan,specgan,melgan}/{applause,hubbub,motor,rail}/...
-// and real_for_subjective/mos/{applause,hubbub,motor,rail}/...
-const MOS_TESTS = [
-  // WaveGAN, applause
-  {
-    id: "wavegan_applause_01",
-    type: "mos",
-    model: "wavegan",
-    class_label: "applause",
-    file: "generated_for_subjective/mos/wavegan/applause/sample_01.wav"
-  },
-  // Real applause
-  {
-    id: "real_applause_01",
-    type: "mos",
-    model: "real",
-    class_label: "applause",
-    file: "real_for_subjective/mos/applause/sample_01.wav"
-  }
-  // TODO: extend with all your other MOS files
-];
-
-// --- Example ABX config ---
-// Replace with your real paths. For each trial, define A, B, X and which is correct.
-const ABX_TESTS = [
-  {
-    id: "wavegan_applause_abx_01",
-    type: "abx",
-    model: "wavegan",
-    class_label: "applause",
-    A: "real_for_subjective/abx/wavegan/applause/A_01.wav",
-    B: "generated_for_subjective/abx/wavegan/applause/B_01.wav",
-    X: "generated_for_subjective/abx/wavegan/applause/X_01.wav",
-    correct: "B"
-  }
-  // TODO: extend with all your other ABX trials
-];
-
 // ================== STATE ==================
 let listenerId = "";
+let MOS_TESTS = [];
+let ABX_TESTS = [];  // after transformation: {id, model, class_label, A,B,X,correct}
 let mosIndex = 0;
 let abxIndex = 0;
 let mosResults = [];
@@ -141,6 +103,54 @@ const abxAudioB = document.getElementById('abxAudioB');
 const abxAudioX = document.getElementById('abxAudioX');
 
 const submitStatus = document.getElementById('submitStatus');
+
+// ================== MANIFEST LOADING ==================
+async function loadManifest() {
+  const res = await fetch('manifest.json');
+  const data = await res.json();
+
+  // Map MOS entries to internal format
+  MOS_TESTS = (data.mos || []).map(e => ({
+    id: e.mos_id,
+    type: e.type,                  // 'generated' or 'real'
+    model: e.model,
+    class_label: e["class"],
+    file: e.path
+  }));
+
+  // Map ABX pairs then transform into trials
+  const pairs = (data.abx || []).map(e => ({
+    id: e.abx_id,
+    model: e.model,
+    class_label: e["class"],
+    real: e.real_path,
+    gen: e.gen_path
+  }));
+  ABX_TESTS = pairs.map(makeAbxTrialFromPair);
+}
+
+// Create A/B/X and correct label from a real/gen pair
+function makeAbxTrialFromPair(pair) {
+  // Randomly decide mapping of real/gen to A/B
+  const flip = Math.random() < 0.5;
+  const A = flip ? pair.real : pair.gen;
+  const B = flip ? pair.gen : pair.real;
+
+  // Randomly choose X as A or B
+  const xIsA = Math.random() < 0.5;
+  const X = xIsA ? A : B;
+  const correct = xIsA ? 'A' : 'B';
+
+  return {
+    id: pair.id,
+    model: pair.model,
+    class_label: pair.class_label,
+    A,
+    B,
+    X,
+    correct
+  };
+}
 
 // ================== MOS LOGIC ==================
 function initMosRatings() {
@@ -168,7 +178,7 @@ mosNextBtn.addEventListener('click', () => {
   mosResults.push({
     listenerId,
     sampleId: s.id,
-    type: s.type,
+    type: s.type,              // 'generated' or 'real'
     model: s.model,
     class_label: s.class_label,
     file: s.file,
@@ -199,7 +209,6 @@ function recordAbxChoice(choice) {
   abxResults.push({
     listenerId,
     trialId: t.id,
-    type: t.type,
     model: t.model,
     class_label: t.class_label,
     A: t.A,
@@ -222,13 +231,26 @@ document.getElementById('btnChooseA').addEventListener('click', () => recordAbxC
 document.getElementById('btnChooseB').addEventListener('click', () => recordAbxChoice('B'));
 
 // ================== START / SUBMIT ==================
-document.getElementById('startBtn').addEventListener('click', () => {
+document.getElementById('startBtn').addEventListener('click', async () => {
   const idInput = document.getElementById('listenerId').value.trim();
   if (!idInput) {
     alert('Please enter a listener ID (can be a pseudonym).');
     return;
   }
   listenerId = idInput;
+
+  try {
+    await loadManifest();
+  } catch (e) {
+    console.error(e);
+    alert('Could not load manifest.json. Please contact the experimenter.');
+    return;
+  }
+
+  if (MOS_TESTS.length === 0 && ABX_TESTS.length === 0) {
+    alert('No tests found in manifest.json.');
+    return;
+  }
 
   // Optional randomization
   MOS_TESTS.sort(() => Math.random() - 0.5);
@@ -252,7 +274,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
   try {
     const response = await fetch(SCRIPT_URL, {
       method: 'POST',
-      mode: 'no-cors', // simplifies CORS; we can’t read the response
+      mode: 'no-cors', // avoids CORS issues; response is opaque
       headers: {
         'Content-Type': 'application/json'
       },
