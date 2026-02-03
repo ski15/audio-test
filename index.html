@@ -271,6 +271,9 @@ document.getElementById('startBtn').addEventListener('click', async () => {
 });
 
 document.getElementById('submitBtn').addEventListener('click', async () => {
+  const sumbitBtn = document.getElementById('submitBtn');
+  sumbitBtn.disabled = true;
+
   const payload = {
     listenerId,
     mosResults,
@@ -296,6 +299,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
     console.error(err);
     submitStatus.textContent = 'Error submitting data. Please contact the experimenter.';
     submitStatus.className = 'status warning';
+    sumbitBtn.disabled = false;
   }
 });
 
