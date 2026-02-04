@@ -861,7 +861,7 @@
       "class": "applause",
       "model": "melgan",
       "real_path": "real_for_subjective/abx/melgan/applause/CkA8NltvQJk_520.0-530.0.wav",
-      "gen_path": "generated_for_subjective/abx/melgan/applause/_RYrdAkHbr8_260.0-270.0_reconstructed_epoch0075.wav"
+      "gen_path": "generated_for_subjective/abx/melgan/applause/RYrdAkHbr8_260.0-270.0_reconstructed_epoch0075.wav"
     },
     {
       "abx_id": "melgan_applause_pair3",
