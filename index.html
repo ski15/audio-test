@@ -24,11 +24,8 @@
     Koristite slušalice i riješite test u tihom okruženju.
     Prvo će biti prikazan MOS, a zatim ABX test.
   </p>
-  <p>
-    ID može biti bilo kojeg oblika.
-  </p>
   <label>
-    Listener ID:
+    Unesite ID: ime, nadimak, pseudonim...:<br>
     <input id="listenerId" autocomplete="off">
   </label>
   <br><br>
@@ -36,7 +33,7 @@
 </div>
 
 <div class="section hidden" id="section-mos">
-  <h2>MOS dio testa</h2>
+  <h2>1. dio testa</h2>
   <p class="status" id="mosStatus"></p>
   <audio id="mosAudio" controls></audio>
   <p>Ocijenite koliko vam audio isječak zvuči stvarno na skali od 1 (uopće ne zvuči stvarno) do 5 (zvuči potpuno stvarno):</p>
@@ -44,7 +41,7 @@
     <ul>
       <li> 1: uopće ne zvuči stvarno </li>
       <li> 2: uglavnom ne zvuči stvarno</li>
-      <li> 3: ne mogu procijeniti / između</li>
+      <li> 3: ne mogu procijeniti</li>
       <li> 4: uglavnom zvuči stvarno</li>
       <li> 5: zvuči potpuno stvarno</li>
     </ul>
@@ -55,7 +52,7 @@
 </div>
 
 <div class="section hidden" id="section-abx">
-  <h2>ABX dio testa</h2>
+  <h2>2. dio testa</h2>
   <p class="status" id="abxStatus"></p>
   <div>
     <p><strong>A</strong>:</p>
@@ -243,7 +240,7 @@ document.getElementById('btnChooseB').addEventListener('click', () => recordAbxC
 document.getElementById('startBtn').addEventListener('click', async () => {
   const idInput = document.getElementById('listenerId').value.trim();
   if (!idInput) {
-    alert('Please enter a listener ID (can be a pseudonym).');
+    alert('Unesite ID (može biti pseudonim).');
     return;
   }
   listenerId = idInput;
