@@ -204,7 +204,7 @@ mosNextBtn.addEventListener('click', () => {
 // ================== ABX LOGIC ==================
 function showAbxTrial() {
   const t = ABX_TESTS[abxIndex];
-  abxStatus.textContent = `Par ${abxIndex + 1} / ${ABX_TESTS.length}`;
+  abxStatus.textContent = `Grupa ${abxIndex + 1} / ${ABX_TESTS.length}`;
   abxAudioA.src = t.A;
   abxAudioB.src = t.B;
   abxAudioX.src = t.X;
@@ -307,3 +307,4 @@ initMosRatings();
 </body>
 
 </html>
+
