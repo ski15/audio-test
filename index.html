@@ -17,12 +17,12 @@
   </style>
 </head>
 <body>
-<h1>MOS + ABX Listening Test</h1>
+<h1>MOS + ABX slušni test</h1>
 
 <div class="section" id="section-intro">
   <p>
     Koristite slušalice i riješite test u tihom okruženju.
-    Prvo će biti prikazan MOS, a zatim ABX test.
+    Prvo će biti prikazan MOS test, a zatim ABX test.
   </p>
   <label>
     Unesite ID: ime, nadimak, pseudonim...:<br>
@@ -173,7 +173,7 @@ function initMosRatings() {
 
 function showMosSample() {
   const s = MOS_TESTS[mosIndex];
-  mosStatus.textContent = `Sample ${mosIndex + 1} / ${MOS_TESTS.length}`;
+  mosStatus.textContent = `Audio ${mosIndex + 1} / ${MOS_TESTS.length}`;
   mosAudio.src = s.file;
   currentMosRating = null;
   mosNextBtn.disabled = true;
@@ -204,7 +204,7 @@ mosNextBtn.addEventListener('click', () => {
 // ================== ABX LOGIC ==================
 function showAbxTrial() {
   const t = ABX_TESTS[abxIndex];
-  abxStatus.textContent = `Trial ${abxIndex + 1} / ${ABX_TESTS.length}`;
+  abxStatus.textContent = `Par ${abxIndex + 1} / ${ABX_TESTS.length}`;
   abxAudioA.src = t.A;
   abxAudioB.src = t.B;
   abxAudioX.src = t.X;
